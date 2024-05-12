@@ -3,16 +3,18 @@ export LD_LIBRARY_PATH=/usr/lib:${LD_LIBRARY_PATH}
 export DISPLAY=:0
 export LINUX_HTMLREADER=/usr/bin/firefox
 #MGLS 
-export MGLS_HOME=/home/debian/microchip/ModelSimPro/modeltech/linuxacoem/mgls
-export MGLS_LICENCE_FILE=1702@debian-MacBookAir
+#export MGLS_HOME=/home/debian/microchip/ModelSimPro/modeltech/linuxacoem/mgls
+#export MGLS_LICENCE_FILE=1702@debian-MacBookAir
 # Libero SoC v2022.1
 #export PATH=/home/debian/microchip/Libero/bin:${PATH}
-export PATH=/home/debian/microchip/Libero/bin:\
-/home/debian/microchip/ModelsimPro/modeltech/linuxacoem:${PATH}
+#export PATH=/home/debian/microchip/Libero/bin:\
+#/home/debian/microchip/ModelsimPro/modeltech/linuxacoem:${PATH}
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
+#export PATH=/home/debian/microchip/Libero/bin:\
+#/home/debian/microchip/SynplifyPro/bin:\
+#/home/debian/microchip/ModelsimPro/modeltech/linuxacoem:${PATH}
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -100,10 +102,12 @@ fi
 
 # some more ls aliases
 #alias ll='ls -alF'
-alias ll='ls -1'
+alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-alias modelsim='~/intelFPGA/19.1/modelsim_ase/bin/vsim'
+alias intel_modelsim='~/intelFPGA/19.1/modelsim_ase/bin/vsim'
+alias microchip_modelsim='~/microchip/ModelSimPro/modeltech/linuxacoem/vsim'
+alias set_vsim='source /home/debian/setup_mentor.sh'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
